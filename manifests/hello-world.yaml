@@ -62,7 +62,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: localhost
+    - host: hello.local
       http:
         paths:
           - path: /
