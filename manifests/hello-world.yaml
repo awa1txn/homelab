@@ -61,10 +61,13 @@ kind: Ingress
 metadata:
   name: hello-world
   namespace: default
+  annotations:
+    # This tells External-DNS to process this ingress
+    external-dns.alpha.kubernetes.io/hostname: "hello.homelab"
 spec:
   ingressClassName: traefik
   rules:
-    - host: hello.local
+    - host: hello.homelab
       http:
         paths:
           - path: /
