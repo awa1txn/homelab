@@ -22,6 +22,8 @@ spec:
       labels:
         app: hello-world
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: spoke
       containers:
         - name: hello-world
           image: hashicorp/http-echo:latest
