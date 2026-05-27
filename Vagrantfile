@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     hub.vm.provider "virtualbox" do |vb|
       vb.name   = "microk8s-hub"
       vb.memory = 4096
-      vb.cpus   = 2
+      vb.cpus   = 1
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     end
 
@@ -54,7 +54,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     spoke.vm.provider "virtualbox" do |vb|
       vb.name   = "microk8s-spoke"
       vb.memory = 2048
-      vb.cpus   = 2
+      vb.cpus   = 1
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     end
 
