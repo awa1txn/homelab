@@ -59,10 +59,6 @@ kind: Ingress
 metadata:
   name: hello-world
   namespace: default
-  annotations:
-    # This tells Argo CD to consider the resource healthy 
-    # even if the status.loadBalancer is empty
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   ingressClassName: traefik
   rules:
